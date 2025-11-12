@@ -15,6 +15,20 @@ export default function Index() {
   const projects = [
     {
       id: 1,
+      title: 'Внедрение CRM YClients для сети барбершопов',
+      client: 'Сеть барбершопов "BROS"',
+      image: 'https://cdn.poehali.dev/projects/4e5fdb25-c261-42ea-b38a-55780a9a0c4d/files/2b93a911-cc1c-4b2d-b365-f04f74f0a139.jpg',
+      category: 'Ритейл и услуги',
+      stats: [
+        { label: 'Рост записей онлайн', value: '+85%' },
+        { label: 'Увеличение выручки', value: '+42%' },
+        { label: 'Срок внедрения', value: '2 мес' }
+      ],
+      description: 'Комплексная автоматизация сети из 8 барбершопов: онлайн-запись, учет клиентов, складской учет, интеграция с кассами и аналитика продаж.',
+      technologies: ['YClients API', 'Online Booking', 'CRM', 'Касса 54-ФЗ']
+    },
+    {
+      id: 2,
       title: 'Автоматизация производства',
       client: 'Промышленный холдинг "Техно"',
       image: 'https://cdn.poehali.dev/projects/4e5fdb25-c261-42ea-b38a-55780a9a0c4d/files/5887c006-cff9-4688-aa2a-745414e58b5c.jpg',
@@ -28,7 +42,7 @@ export default function Index() {
       technologies: ['Siemens S7', 'WinCC', 'SAP ERP', 'OPC UA']
     },
     {
-      id: 2,
+      id: 3,
       title: 'Умное здание',
       client: 'БЦ "Центральный"',
       image: 'https://cdn.poehali.dev/projects/4e5fdb25-c261-42ea-b38a-55780a9a0c4d/files/40f2f30f-af38-4834-8b85-0ee4ed34f3d9.jpg',
@@ -42,7 +56,7 @@ export default function Index() {
       technologies: ['KNX', 'BACnet', 'Modbus', 'IoT Platform']
     },
     {
-      id: 3,
+      id: 4,
       title: 'Цифровизация склада',
       client: 'Логистический оператор "Транс-Сервис"',
       image: 'https://cdn.poehali.dev/projects/4e5fdb25-c261-42ea-b38a-55780a9a0c4d/files/3b5b746c-e5df-484a-b96a-66a169927c95.jpg',
