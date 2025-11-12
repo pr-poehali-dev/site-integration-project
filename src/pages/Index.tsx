@@ -124,6 +124,7 @@ export default function Index() {
               { id: 'projects', label: 'Проекты' },
               { id: 'services', label: 'Услуги' },
               { id: 'about', label: 'О компании' },
+              { id: 'testimonials', label: 'Отзывы' },
               { id: 'partners', label: 'Партнеры' },
               { id: 'contacts', label: 'Контакты' }
             ].map((item) => (
@@ -315,7 +316,56 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="partners" className="py-20">
+        <section id="testimonials" className="py-20">
+          <div className="container">
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Отзывы клиентов</h2>
+              <p className="text-lg text-muted-foreground">
+                Что говорят о нас компании, с которыми мы работали
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: 'Алексей Морозов',
+                  position: 'Директор сети барбершопов "BROS"',
+                  text: 'За 2 месяца внедрили YClients во всех точках. Онлайн-записи выросли на 85%, а мы наконец-то видим полную картину по загрузке мастеров и продажам. Команда работала четко, все обучили, все настроили.',
+                  rating: 5
+                },
+                {
+                  name: 'Ирина Петрова',
+                  position: 'IT-директор холдинга "Техно"',
+                  text: 'Автоматизировали производство за 6 месяцев. Производительность выросла на 45%, простои сократились в 3 раза. TechIntegrator — профессионалы своего дела, которые держат слово по срокам и бюджету.',
+                  rating: 5
+                },
+                {
+                  name: 'Дмитрий Соколов',
+                  position: 'Управляющий БЦ "Центральный"',
+                  text: 'Внедрение системы умного здания окупилось за 2.5 года за счет экономии энергии 40%. Круглосуточная поддержка работает безупречно, любые вопросы решаются оперативно.',
+                  rating: 5
+                }
+              ].map((testimonial, index) => (
+                <Card key={index} className="hover:shadow-lg transition-all animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <CardContent className="p-8">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Icon key={i} name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
+                    <div className="border-t pt-4">
+                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="partners" className="py-20 bg-muted/30">
           <div className="container">
             <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши партнеры</h2>
@@ -336,7 +386,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="contacts" className="py-20 bg-muted/30">
+        <section id="contacts" className="py-20">
           <div className="container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12 animate-fade-in">
